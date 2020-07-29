@@ -1,0 +1,20 @@
+{{template "base" .}}
+
+{{define "title"}}WhoIs{{end}}
+
+{{define "main"}}
+
+<h1>
+    WhoIs
+</h1>
+<div class="description">
+    Who Is This!
+</div>
+<form id="whoisform">
+    IP Address or Domain Name:
+    <input type="text" id="input" placeholder="e.g 192.168.1.1 or example.com" />
+    <button type="submit">Whois</button>
+</form>
+<div id="resultwhois"></div>
+<script src="/static/whois.js"></script>
+{{end}}

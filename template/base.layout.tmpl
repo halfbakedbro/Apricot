@@ -1,0 +1,20 @@
+{{define "base"}}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="/static/stylesheets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{template "title" .}} Apricot</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1><a href='/'>Online Utilities</a></h1>
+        </div>
+    </body>
+    <main>
+        {{template "main" .}}
+    </main>
+    {{template "footer" .}}
+</html>
+{{end}}

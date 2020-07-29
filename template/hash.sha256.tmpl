@@ -1,0 +1,28 @@
+{{template "base" .}}
+
+{{define "title"}}SHA256{{end}}
+
+{{define "main"}}
+
+<h1>
+    SHA256
+</h1>
+<div class="description">
+    SHA256 Hash Function
+</div>
+<form action="/hash/sha256/" method="POST" id="sha256">
+    <div class="input">
+        <textarea name="text" placeholder="Enter here..."></textarea>
+    </div>
+    <div class="submit">
+        <input id="execute" type="submit" value="hash" class="btn btn-default">
+    </div>
+</form>
+<div class="output">
+    <textarea id="output" placeholder="...." name="sha256">
+        {{if .HashVal}}
+            {{.HashVal}}
+        {{end}}
+    </textarea>
+</div>
+{{end}}

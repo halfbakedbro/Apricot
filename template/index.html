@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Utilities</title>
+</head>
+<body>
+    <body>
+        <div id="header">
+            <h1>Online Utilities</h1>
+        </div>
+        <div id="body">
+            <h1>MD5
+            </h1>
+            <div class="description">
+                MD5 hash function
+            </div>
+            <form action="/hash/md5/" method="POST" id="md5">
+                <div class="input">
+                    <textarea name ="text" placeholder="Enter here..."></textarea>
+                </div>
+                <div class="submit">
+                    <input id="execute" type="submit" value="hash" class="btn btn-default">
+                </div>
+            </form>
+            <div class="output">
+                <textarea id="output" placeholder="...">
+                    {{if .hashVal}}
+                        Some Data
+                        {{.hashVal}}
+                    {{end}}
+                </textarea>
+            </div>
+        </div>
+    </body> 
+</body>
+</html>

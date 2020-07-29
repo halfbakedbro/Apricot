@@ -1,0 +1,36 @@
+{{template "base" .}}
+
+{{define "title"}}Home{{end}}
+
+{{define "main"}}
+
+<style>
+    ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a{
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+</style>
+
+<ul>
+    <li><a href="/hash/md5/">MD5</a></li>
+    <li><a href="/hash/sha1/">SHA1</a></li>
+    <li><a href="/hash/sha256/">SHA256</a></li>
+    <li><a href="/whois">WhoIs</a></li>
+</ul>
+{{end}}
