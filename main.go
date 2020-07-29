@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 type Response struct {
@@ -100,6 +101,11 @@ func whoist(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 
 	mux := http.NewServeMux()
 	mux.Handle("/static/",
@@ -114,6 +120,8 @@ func main() {
 	mux.HandleFunc("/whois/", whoist)
 
 	fmt.Println("Starting server on :8081")
-	err := http.ListenAndServe(":8081", mux)
+	s := strconv.Itoa(port)
+	str := ":" + s
+	err := http.ListenAndServe(str, mux)
 	log.Fatal(err)
 }
