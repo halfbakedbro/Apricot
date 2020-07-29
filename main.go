@@ -7,7 +7,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
-	"strconv"
+	"os"
 )
 
 type Response struct {
@@ -120,8 +120,8 @@ func main() {
 	mux.HandleFunc("/whois/", whoist)
 
 	fmt.Println("Starting server on :8081")
-	s := strconv.Itoa(port)
-	str := ":" + s
+	//s := strconv.Itoa(port)
+	str := ":" + port
 	err := http.ListenAndServe(str, mux)
 	log.Fatal(err)
 }
