@@ -6,6 +6,7 @@ import (
 	"github.com/domainr/whois"
 	"html/template"
 	"log"
+	"net"
 	"net/http"
 	"os"
 )
@@ -100,12 +101,30 @@ func whoist(w http.ResponseWriter, r *http.Request) {
 	jsonResponse(w, Response{Result: result})
 }
 
+func myIp() {
+	addrs, err := net.InterfaceAddrs()
+	if err != nil {
+		os.Stderr.WriteString("Oops: " + err.Error() + "\n")
+		os.Exit(1)
+	}
+
+	for _, a := range addrs {
+		if ipnet, ok := a.(*net.IPNet); ok && !ipnet.IP.IsLoopback() {
+			if ipnet.IP.To4() != nil {
+				os.Stdout.WriteString(ipnet.IP.String() + "\n")
+			}
+		}
+	}
+}
+
 func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
 		log.Fatal("$PORT must be set")
 	}
+
+	myIp()
 
 	mux := http.NewServeMux()
 	mux.Handle("/static/",
@@ -119,7 +138,7 @@ func main() {
 	mux.HandleFunc("/hash/sha256/", shas256)
 	mux.HandleFunc("/whois/", whoist)
 
-	fmt.Println("Starting server on :8081")
+	//fmt.Println("Starting server on :8081")
 	//s := strconv.Itoa(port)
 	str := ":" + port
 	err := http.ListenAndServe(str, mux)
