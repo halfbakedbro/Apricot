@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/domainr/whois"
 	"html/template"
 	"log"
@@ -124,7 +123,7 @@ func main() {
 		log.Fatal("$PORT must be set")
 	}
 
-	myIp()
+	//myIp()
 
 	mux := http.NewServeMux()
 	mux.Handle("/static/",
@@ -136,6 +135,7 @@ func main() {
 	mux.HandleFunc("/hash/md5/", mdHash)
 	mux.HandleFunc("/hash/sha1/", shas1)
 	mux.HandleFunc("/hash/sha256/", shas256)
+	mux.HandleFunc("/math/gcd/", gcd)
 	mux.HandleFunc("/whois/", whoist)
 
 	//fmt.Println("Starting server on :8081")
