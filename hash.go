@@ -24,6 +24,7 @@ func mdHash(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"template/hash.md5.tmpl",
 		"template/base.layout.tmpl",
+		"template/sidenave.page.tmpl",
 		"template/footer.partial.tmpl",
 	}
 
@@ -68,6 +69,7 @@ func shas1(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"template/hash.sha1.tmpl",
 		"template/base.layout.tmpl",
+		"template/sidenave.page.tmpl",
 		"template/footer.partial.tmpl",
 	}
 
@@ -112,6 +114,7 @@ func shas256(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"template/hash.sha256.tmpl",
 		"template/base.layout.tmpl",
+		"template/sidenave.page.tmpl",
 		"template/footer.partial.tmpl",
 	}
 

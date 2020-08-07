@@ -7,22 +7,24 @@
 <h1>
     SHA1
 </h1>
-<div class="description">
-    SHA1 Hash Function
-</div>
-<form action="/hash/sha1/" method="POST" id="sha1">
-    <div class="input">
-        <textarea name="text" placeholder="Enter here..."></textarea>
+<div class="main">
+    <div class="description">
+        SHA1 Hash Function
     </div>
-    <div class="submit">
-        <input id="execute" type="submit" value="hash" class="btn btn-default">
+    <form action="/hash/sha1/" method="POST" id="sha1">
+        <div class="input">
+            <textarea name="text" placeholder="Enter here..."></textarea>
+        </div>
+        <div class="submit">
+            <input id="execute" type="submit" value="hash" class="btn btn-default">
+        </div>
+    </form>
+    <div class="output">
+        <textarea id="output" placeholder="...." name="sha1">
+            {{if .HashVal}}
+                {{.HashVal}}
+            {{end}}
+        </textarea>
     </div>
-</form>
-<div class="output">
-    <textarea id="output" placeholder="...." name="sha1">
-        {{if .HashVal}}
-            {{.HashVal}}
-        {{end}}
-    </textarea>
 </div>
 {{end}}

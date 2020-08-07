@@ -4,17 +4,16 @@
     <head>
         <meta charset='utf-8'>
         <link rel="stylesheet" href="/static/stylesheets/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" >
         <title>{{template "title" .}} Apricot</title>
     </head>
     <body>
         <div id="header">
             <h1><a href='/'>Online Utilities</a></h1>
         </div>
-        <a href="#null" onclick="javascript:history.back();">Previous</a>
-        <a href="#null" onclick="javascript:history.forward();">Next</a>
     </body>
     <main>
+        {{template "sidenave" .}}
         {{template "main" .}}
     </main>
     {{template "footer" .}}

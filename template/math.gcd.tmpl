@@ -7,57 +7,59 @@
 <h1>
     GCD
 </h1>
+<div class="main">
 <div class="description">
     GCD - Euclidean
 </div>
-<form action="/math/gcd/" method="POST" id="gcd">
-    <table class="noborder">
-        <tbody>
-            <tr>
-                <td>
-                    <label for="numberX">
-                        <var>x</var>
-                        :
-                    </label>
-                </td>
-                <td>
-                    <input type="text" name="numberX" id="numberX" style="width: 12em"></input>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="numberY">
-                        <var>y</var>
-                        :
-                    </label>
-                </td>
-                <td>
-                    <input type="text" name="numberY" id="numberY" style="width: 12em"></input>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="output">
-                        gcd(
-                        <var>x</var>
-                        ,
-                        <var>y</var>
-                        ):
-                    </label>
-                </td>
-                <td>
-                    <!--<textarea id="output" style="width: 12em"></textarea> -->
-                    <input type="text" id="output" readonly="readonly" style="width: 12em" placeholder="{{.Mathval}}">
-                </td>
+    <form action="/math/gcd/" method="POST" id="gcd">
+        <table class="noborder">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="numberX">
+                            <var>x</var>
+                            :
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="numberX" id="numberX" style="width: 12em"></input>
+                    </td>
                 </tr>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    <input type="submit" value="calculate"></input>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</form>
+                <tr>
+                    <td>
+                        <label for="numberY">
+                            <var>y</var>
+                            :
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" name="numberY" id="numberY" style="width: 12em"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="output">
+                            gcd(
+                            <var>x</var>
+                            ,
+                            <var>y</var>
+                            ):
+                        </label>
+                    </td>
+                    <td>
+                        <!--<textarea id="output" style="width: 12em"></textarea> -->
+                        <input type="text" id="output" readonly="readonly" style="width: 12em" placeholder="{{.Mathval}}">
+                    </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="calculate"></input>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
 {{end}}

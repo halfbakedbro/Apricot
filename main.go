@@ -46,6 +46,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"template/home.page.tmpl",
 		"template/base.layout.tmpl",
+		"template/sidenave.page.tmpl",
 		"template/footer.partial.tmpl",
 	}
 
@@ -70,6 +71,7 @@ func whoist(w http.ResponseWriter, r *http.Request) {
 		files := []string{
 			"template/util.whois.tmpl",
 			"template/base.layout.tmpl",
+			"template/sidenave.page.tmpl",
 			"template/footer.partial.tmpl",
 		}
 

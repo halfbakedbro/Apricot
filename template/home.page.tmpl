@@ -3,7 +3,7 @@
 {{define "title"}}Home{{end}}
 
 {{define "main"}}
-
+<!--
 <style>
     ul {
     list-style-type: none;
@@ -24,27 +24,10 @@ li a:hover {
     background-color: #555;
     color: white;
 }
-
-</style>
+</style>-->
 <script type="text/javascript" src="/static/date.js"></script>
-<div class="clock">
+<div class="main">
     <p>Date/Time: <span id="datetime"></span></p>
     <script type="text/javascript">window.onload = datetime('datetime');</script>
 </div>
-
-<ul>
-    <li><a href="/hash/md5/">MD5</a></li>
-    <li><a href="/hash/sha1/">SHA1</a></li>
-    <li><a href="/hash/sha256/">SHA256</a></li>
-    <li><a href="/math/gcd/">GCD</a></li>
-    <li><a href="/whois">WhoIs</a></li>
-</ul>
-
-<!--<a href="#" onclick="epochExample1(); return false;">Click to Show Current Epoch Time</a>
-<script type="text/javascript">
-    function epochExample1() {
-      var d = new Date(); 
-      prompt('Current Epoch Time',(d.getTime()-d.getMilliseconds())/1000);
-    }
-</script>-->
 {{end}}

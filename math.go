@@ -43,6 +43,7 @@ func gcd(w http.ResponseWriter, r *http.Request) {
 	files := []string{
 		"template/math.gcd.tmpl",
 		"template/base.layout.tmpl",
+		"template/sidenave.page.tmpl",
 		"template/footer.partial.tmpl",
 	}
 
@@ -67,9 +68,6 @@ func gcd(w http.ResponseWriter, r *http.Request) {
 
 		xi, _ := strconv.Atoi(x[0])
 		yi, _ := strconv.Atoi(y[0])
-
-		fmt.Printf("%T\n", xi)
-		fmt.Println(xi, "----", yi)
 
 		data := Mathval{Mathval: 0}
 
