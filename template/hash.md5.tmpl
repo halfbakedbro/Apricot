@@ -4,23 +4,24 @@
 
 {{define "main"}}
 
-<h1>
-    MD5
-</h1>
+
 <div class="main">
+    <h1>
+        MD5
+    </h1>
     <div class="description">
         MD5 Hash Function
     </div>
     <form action="/hash/md5/" method="POST" id="md5">
         <div class="input">
-            <textarea name="text" placeholder="Enter here..."></textarea>
+            <textarea name="text" placeholder="Enter here..." style="width: 12em"></textarea>
         </div>
         <div class="submit">
             <input id="execute" type="submit" value="hash" class="btn btn-default">
         </div>
     </form>
     <div class="output">
-        <textarea id="output" placeholder="...." name="md5">
+        <textarea id="output" placeholder="...." style="width: 12em" name="md5">
             {{if .HashVal}}
                 {{.HashVal}}
             {{end}}
