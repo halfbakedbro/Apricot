@@ -44,7 +44,7 @@ body {
 .footer {
     bottom: 0;
     margin-left: 160px;
-    font-size: 28px;
+    font-size: 16px;
     padding: 0px 10px;
 }
 @media screen and (max-height: 450px) {
@@ -75,7 +75,7 @@ textarea {
 .btn {
   display: inline-block;
   padding: 6px 12px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;

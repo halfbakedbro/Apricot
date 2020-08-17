@@ -14,14 +14,14 @@
     </div>
     <form action="/hash/md5/" method="POST" id="md5">
         <div class="input">
-            <textarea name="text" placeholder="Enter here..." style="width: 12em"></textarea>
+            <textarea name="text" placeholder="Enter here..." style="width: 366px; height: 60px;"></textarea>
         </div>
         <div class="submit">
             <input id="execute" type="submit" value="hash" class="btn btn-default">
         </div>
     </form>
     <div class="output">
-        <textarea id="output" placeholder="...." style="width: 12em" name="md5">
+        <textarea id="output" placeholder="...." style="width: 366px; height: 60px;" name="md5">
             {{if .HashVal}}
                 {{.HashVal}}
             {{end}}
